@@ -3438,6 +3438,16 @@ input[type="button"].btn--primary:focus {
     position: relative;
 }
 
+#titulo{
+    display: flex;
+    flex-direction: column;
+    margin-top: -26%;
+}
+
+#frase{
+    text-align: end;
+}
+
 .s-hero__bg {
     display: block;
     position: absolute;
@@ -3447,11 +3457,52 @@ input[type="button"].btn--primary:focus {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/tierra.jpg);
+   /*  background-image: url(../images/tierra.jpg); */
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
 }
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    z-index: -1000; 
+    overflow: hidden;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Style the button used to pause/play the video */
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
 
 .s-hero__bg::before {
     display: block;
@@ -3575,6 +3626,7 @@ input[type="button"].btn--primary:focus {
     transform: translateX(-50%);
     position: absolute;
     left: 50%;
+    top: 58%;
     bottom: var(--vspace-1_25);
 }
 
@@ -3610,7 +3662,7 @@ input[type="button"].btn--primary:focus {
     position: relative;
 }
 
-.s-hero__scroll-link .scroll-arrow svg {
+.s-hero__ scroll-link .scroll-arrow svg {
     height: 2rem;
     width: 2rem;
     -webkit-transform: translate3d(-50%, -50%, 0);
@@ -3689,6 +3741,14 @@ input[type="button"].btn--primary:focus {
         font-size: 2rem;
         max-width: 680px;
     }
+    .s-hero__scroll {
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        position: absolute;
+        left: 50%;
+        bottom: var(--vspace-1_25);
+        top: 58%;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -3721,6 +3781,14 @@ input[type="button"].btn--primary:focus {
     }
     .s-hero__content h3 {
         max-width: 600px;
+    }
+    .s-hero__scroll {
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        position: absolute;
+        left: 50%;
+        bottom: var(--vspace-1_25);
+        top: 80%;
     }
 }
 
@@ -3774,12 +3842,17 @@ input[type="button"].btn--primary:focus {
  * # about
  *
  * ------------------------------------------------------------------- */
-.s-about {
+  #about{
+    background-image: url("../images/ondas.jpg");
+    background-size: cover;background-repeat: no-repeat;
+  }
+
+ .s-about {
     --color-border: var(--color-gray-16);
     background-color: var(--color-gray-17);
-    padding-top: calc(6 * var(--space));
+    padding-top: calc(3 * var(--space));
     padding-bottom: var(--vspace-4);
-    color: rgba(255, 255, 255, 0.4);
+    color: rgb(0, 0, 0);
 }
 
 .s-about h3 {
@@ -3800,7 +3873,7 @@ input[type="button"].btn--primary:focus {
 }
 
 .s-about__content-bottom a {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .s-about__content-bottom a:hover, 
@@ -3857,7 +3930,7 @@ input[type="button"].btn--primary:focus {
 
 @media screen and (max-width: 800px) {
     .s-about {
-        padding-top: var(--vspace-5);
+        padding-top: calc(1 * var(--space));
     }
     .s-about__pic {
         display: none;

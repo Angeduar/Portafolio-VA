@@ -54,18 +54,29 @@
   <section id="hero" class="s-hero target-section">
 
       <div class="s-hero__bg rellax" data-rellax-speed="-7"></div>
-
+      
       <div class="row s-hero__content">
           <div class="column">
-
+              <video autoplay loop muted id="myVideo">
+                <source src="%PUBLIC_URL%/images/fondoVic.mp4" type="video/mp4">
+              </video>
+              
               <div class="s-hero__content-about">
+                <div id="titulo">
+                    <h1>CREATIVO</h1>
 
-                  <h1>Soy Victor Alfonzo</h1>
-
-                  <h3>
-                  <span>Arquitecto</span>,<span>entusiasta de diseños de espacios innovadores,</span> creador de proyectos y soluciones, <a class="smoothscroll" href="#about">has click aqui para deslizar</a>
-                  y <a class="smoothscroll" href="#about">saber mas de mi</a>.
-                  </h3>
+                    <h3>
+                    <a class="smoothscroll" href="#about">Arquitectura</a>
+                    </h3>
+                </div>
+                  
+                  <!-- Optional: some overlay text to describe the video -->
+                  <!-- <div class="content"> -->
+                    <!-- <h1>Heading</h1>
+                    <p>Lorem ipsum...</p> -->
+                    <!-- Use a button to pause/play the video with JavaScript -->
+                    <!-- <button id="myBtn" onclick="myFunction()">Pause</button>
+                  </div> -->
 
                   <div class="s-hero__content-social">
 <!--                  <a href="#0"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
@@ -100,18 +111,27 @@
 
       <div class="row">
           <div class="column large-3 tab-12">
-              <img class="s-about__pic" src="%PUBLIC_URL%/images/avatars/Angel-E.png" alt="Angel">
+              <img class="s-about__pic" src="%PUBLIC_URL%/images/Victor.jpg" alt="Victor">
           </div>
           <div class="column large-9 tab-12 s-about__content">
-              <h3>Quien soy</h3>
+              <!-- <h3>Quien soy</h3> -->
               <p>
-                Me llamo Ángel Eduardo Meléndez Salazar, nací en Puerto Cabello, tengo 27 años, estudie Ingenieria Electrónica en la UNEXPO Vicerectorado Barquisimeto, mi experiencia en electrónica la desarrolle en el laboratorio de electronica en Mondelez International (Antigua Kraft) realizando una base de datos a los PLC en planta galleta y wafer, tambien trabaje alli como analista de almacen y tecnico electronico, en cuanto al desarrollo di mis primeros pasos en la universidad con un poco de C/C++, Arduino, diseño de PCB, circuitos digitales, servidores y redes, mas adelante me inscribi en el bootcamp SoyHenry para aprender React Redux Squenlize Express.js PostgreSQL, JavaScript, bases de datos relacionales y no relacionales, y luego con CSS, HTML, Phyton, PHP y java por cuenta propia y gracias a unas pasantias remotas en Clever Cloud Mexico, He obteniendo certificaciones en cuanto al diseño responsive y estructura de datos en javascript en FreeCodeCamp. 
+                Estoy convencido de que la arquitectura se puede servirse de los
+                instrumentos de la modernidad sin olvidar tener respeto y un diálogo con
+                el pasado. Donde el entorno rija el planteamiento arquitectónico, no nada
+                mas seguir los principios vitruviano como (firmitas, Utilitas
+                Venustas). Firmeza, Utilidad y Belleza si no también tecnología, Sustentabilidad y ecología para con el mundo.
               </p>
 
               <p>
-                He solventado problemas sencillos trabajando como freelance con clientes internacionales bajo confidencialidad, Además, tengo una amplia comprensión de las técnicas de aprendizaje y cómo aplicarlas para maximizar el rendimiento y comprendo la importancia de seguir instrucciones y estar preparado para afrontar desafíos.
+                Para realizar una buena arquitectura tenemos que entender que no es
+                construir sin mas como levantar paredes y muros. Si no, es dar Lugar a los
+                actos de la gente es crear el escenario donde desenvolvemos esta gran obra
+                que es nuestra vida.
               </p>
 
+              <p id="frase">ARQ: Victor Dauhare</p>
+              
               <hr>
 
               <div class="row s-about__content-bottom">
@@ -119,17 +139,17 @@
                       <h3>Detalle de contacto</h3>
   
                       <p>
-                      Ángel Meléndez <br>
-                      Venezuela, Barquisimeto<br>
-                      <a href="tel:+584125311197">+58 412 5311197</a> <br>
-                      <a href="mailto:#0">angeduar95@gmail.com</a>
+                        Victor Dauhare <br>
+                      España, Salamanca<br>
+                      <a href="tel:+584125311197">+34 602428765</a> <br>
+                      <a href="mailto:#0">arquivictor5@gmail.com</a>
                       </p>
                       
                   </div>
                   <div class="column w-1000-stack">
-                      <a href="download/CV_AngelMelendez.pdf" download="CV Angel Melendez.pdf" class="btn btn--download">
+                      <a href="download/PORTAFOLIO_ESPANA.pdf" download="PORTAFOLIO ESPAÑA.pdf" class="btn btn--download">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);"><path d="M12 16L16 11 13 11 13 4 11 4 11 11 8 11z"></path><path d="M20,18H4v-7H2v7c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2v-7h-2V18z"></path></svg>
-                          Descargar CV
+                          Descargar Portafolio PDF
                       </a>
                   </div>
               </div>
@@ -725,7 +745,24 @@
   </footer>
 
 
-
+  <script>
+    // Get the video
+    var video = document.getElementById("myVideo");
+    
+    // Get the button
+    var btn = document.getElementById("myBtn");
+    
+    // Pause and play the video, and change the button text
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+    </script>
       
       <noscript>You need to enable JavaScript to run this app.</noscript>
       <div id="root"></div>
